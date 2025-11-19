@@ -8,7 +8,7 @@ public class Jugador : MonoBehaviour
     public float speed = 5f;
     public Animator anim;
     float movimientoX;
-
+    public object collision;
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class Jugador : MonoBehaviour
 
     void Update()
     {
-
+        rb.linearVelocity = new Vector2(movimientoX * speed, rb.linearVelocity.y);
     }
    
 
